@@ -2,9 +2,9 @@ import heroAsset from "@/assets/roman-portrait.png.asset.json";
 import fintechImg from "@/assets/case-fintech.jpg";
 import logisticsImg from "@/assets/case-logistics.jpg";
 import ecomImg from "@/assets/case-ecom.jpg";
-import portrait from "@/assets/programist-fullstack-laravel-Roman-Developer.png";
+import heroImg from "@/assets/programist-fullstack-laravel-Roman-Developer.png";
 
-const heroImg = heroAsset.url;
+// const heroImg = heroAsset.url;
 
 const STACK = [
   "TypeScript", "React", "Next.js", "TanStack", "Node.js", "NestJS",
