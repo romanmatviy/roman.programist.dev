@@ -1,0 +1,152 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --shadow-soft: 0 1px 2px oklch(0.2 0.02 60 / 0.04), 0 8px 24px oklch(0.2 0.02 60 / 0.06);
+  --shadow-warm: 0 20px 60px -20px oklch(0.55 0.16 45 / 0.35);
+}
+
+:root {
+  --radius: 0.75rem;
+
+  /* Warm sophisticated light theme — cream paper + terracotta */
+  --background: oklch(0.975 0.012 78);
+  --foreground: oklch(0.20 0.022 55);
+  --surface: oklch(0.955 0.018 75);
+  --surface-2: oklch(0.93 0.022 72);
+  --ink: oklch(0.18 0.02 50);
+  --ink-soft: oklch(0.42 0.025 55);
+
+  --card: oklch(0.99 0.008 80);
+  --card-foreground: var(--foreground);
+  --popover: oklch(0.99 0.008 80);
+  --popover-foreground: var(--foreground);
+
+  --primary: oklch(0.55 0.15 45);             /* burnt terracotta / copper */
+  --primary-foreground: oklch(0.98 0.01 80);
+  --secondary: oklch(0.92 0.02 75);
+  --secondary-foreground: var(--foreground);
+  --muted: oklch(0.93 0.015 75);
+  --muted-foreground: oklch(0.48 0.022 55);
+  --accent: oklch(0.72 0.13 70);              /* warm amber */
+  --accent-foreground: oklch(0.18 0.02 50);
+  --destructive: oklch(0.55 0.22 27);
+  --destructive-foreground: oklch(0.98 0.01 80);
+  --border: oklch(0.88 0.015 70);
+  --input: oklch(0.88 0.015 70);
+  --ring: oklch(0.55 0.15 45);
+}
+
+.dark {
+  --background: oklch(0.16 0.012 55);
+  --foreground: oklch(0.95 0.012 78);
+  --surface: oklch(0.20 0.015 55);
+  --surface-2: oklch(0.24 0.018 55);
+  --ink: oklch(0.96 0.012 78);
+  --ink-soft: oklch(0.72 0.018 70);
+
+  --card: oklch(0.20 0.015 55);
+  --card-foreground: var(--foreground);
+  --popover: oklch(0.20 0.015 55);
+  --popover-foreground: var(--foreground);
+
+  --primary: oklch(0.72 0.14 55);             /* lifted copper for dark */
+  --primary-foreground: oklch(0.14 0.012 55);
+  --secondary: oklch(0.26 0.018 55);
+  --secondary-foreground: var(--foreground);
+  --muted: oklch(0.24 0.015 55);
+  --muted-foreground: oklch(0.70 0.018 70);
+  --accent: oklch(0.78 0.13 75);
+  --accent-foreground: oklch(0.16 0.012 55);
+  --destructive: oklch(0.65 0.22 27);
+  --destructive-foreground: oklch(0.98 0.01 80);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 14%);
+  --ring: oklch(0.72 0.14 55);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-feature-settings: "ss01";
+    letter-spacing: -0.02em;
+  }
+  ::selection {
+    background-color: oklch(from var(--primary) l c h / 0.25);
+    color: var(--foreground);
+  }
+}
+
+@utility container-page {
+  width: 100%;
+  max-width: 80rem;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+@utility paper-grain {
+  background-image:
+    radial-gradient(oklch(0.55 0.15 45 / 0.05) 1px, transparent 1px),
+    radial-gradient(oklch(0.55 0.15 45 / 0.04) 1px, transparent 1px);
+  background-size: 28px 28px, 28px 28px;
+  background-position: 0 0, 14px 14px;
+}
+
+@utility eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--primary);
+  font-weight: 500;
+}
