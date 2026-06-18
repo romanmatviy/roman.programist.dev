@@ -513,7 +513,7 @@ export function HomeSections() {
               </div>
               <div className="flex gap-4">
                 <dt className="w-20 text-primary uppercase tracking-widest text-xs">GitHub</dt>
-                <dd><a className="hover:underline" href="https://github.com/MatviyRoman">/roman-programist</a></dd>
+                <dd><a className="hover:underline" href="https://github.com/MatviyRoman">/MatviyRoman</a></dd>
               </div>
               <div className="flex gap-4">
                 <dt className="w-20 text-primary uppercase tracking-widest text-xs">Локація</dt>
