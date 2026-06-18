@@ -2,6 +2,7 @@ import heroAsset from "@/assets/roman-portrait.png.asset.json";
 import fintechImg from "@/assets/case-fintech.jpg";
 import logisticsImg from "@/assets/case-logistics.jpg";
 import ecomImg from "@/assets/case-ecom.jpg";
+import portrait from "@/assets/programist-fullstack-laravel-Roman-Developer.png";
 
 const heroImg = heroAsset.url;
 
@@ -17,7 +18,7 @@ const SERVICES = [
     eyebrow: "MVP за 4–8 тижнів",
     title: "Запуск продукту з нуля",
     desc: "Архітектура, дизайн-система, фронтенд, бекенд, інфраструктура. Прозорий процес, щотижневі демо.",
-    price: "від $6 000",
+    price: "від $3 000",
     unit: "фіксована вартість",
     features: ["Архітектура та дизайн БД", "Авторизація, платежі, листи", "Деплой у production"],
   },
@@ -26,7 +27,7 @@ const SERVICES = [
     eyebrow: "Senior на проєкт",
     title: "Технічний партнер",
     desc: "Підсилюю вашу команду як lead-розробник або fractional CTO. Розробка фіч, код-рев'ю, ментoрство.",
-    price: "$70 / год",
+    price: "$35 / год",
     unit: "почасова ставка",
     features: ["Lead-розробка", "Code review та рефакторинг", "Найм та онбординг команди"],
     popular: true,
@@ -422,7 +423,7 @@ export function HomeSections() {
                 engagement ($70/hr), technical audit (from $1,200). Speaks Ukrainian,
                 English, Polish, Russian. Available for remote work worldwide.
               </p>
-              <p>Contact: hello@roman.programist.dev · roman.programist.dev</p>
+              <p>Contact: hello@matviy.pp.ua · roman.programist.dev</p>
             </div>
           </div>
         </div>
@@ -504,15 +505,15 @@ export function HomeSections() {
             <dl className="mt-10 space-y-4 font-mono text-sm">
               <div className="flex gap-4">
                 <dt className="w-20 text-primary uppercase tracking-widest text-xs">Email</dt>
-                <dd><a className="hover:underline" href="mailto:hello@roman.programist.dev">hello@roman.programist.dev</a></dd>
+                <dd><a className="hover:underline" href="mailto:hello@matviy.pp.ua">hello@matviy.pp.ua</a></dd>
               </div>
               <div className="flex gap-4">
                 <dt className="w-20 text-primary uppercase tracking-widest text-xs">Telegram</dt>
-                <dd><a className="hover:underline" href="https://t.me/roman_programist">@roman_programist</a></dd>
+                <dd><a className="hover:underline" href="https://t.me/MatviyRoman">@MatviyRoman</a></dd>
               </div>
               <div className="flex gap-4">
                 <dt className="w-20 text-primary uppercase tracking-widest text-xs">GitHub</dt>
-                <dd><a className="hover:underline" href="https://github.com/roman-programist">/roman-programist</a></dd>
+                <dd><a className="hover:underline" href="https://github.com/MatviyRoman">/roman-programist</a></dd>
               </div>
               <div className="flex gap-4">
                 <dt className="w-20 text-primary uppercase tracking-widest text-xs">Локація</dt>
@@ -531,7 +532,7 @@ export function HomeSections() {
               const body = encodeURIComponent(
                 `${data.get("message")}\n\n— ${data.get("name")} (${data.get("email")})`
               );
-              window.location.href = `mailto:hello@roman.programist.dev?subject=${subject}&body=${body}`;
+              window.location.href = `mailto:hello@matviy.pp.ua?subject=${subject}&body=${body}`;
             }}
           >
             <div className="grid sm:grid-cols-2 gap-4">
@@ -563,7 +564,7 @@ export function HomeSections() {
                 <option>$5k–$15k</option>
                 <option>$15k–$50k</option>
                 <option>$50k+</option>
-                <option>Почасова робота</option>
+                <option>Погодинна робота</option>
               </select>
             </label>
             <label className="block">
